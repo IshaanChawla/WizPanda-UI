@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WizPanda </title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+        
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./Home.css">
+    </head>
+    <body data-spy="scroll" data-target="#scroll-spy">
+        <div class="row">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="navbar-header">
+                    <h2 class="navbar-brand brand-name">
+                        <a href="#">
+                            <span class="red">Wiz</span><span class="white">Panda</span>
+                        </a>
+                    </h2>
+                    <h1 class="section-heading">
+                        <span id="change-heading">Home</span>
+                    </h1>
+                </div>
+            </nav>
+            <div>
+                <div id="navcontainer">
+                    <nav id="scroll-spy">
+                        <ul class="nav nav-stacked" data-offset-top="120" data-spy="affix">
+                            <li id="home" class="active">
+                                <a href="#section1">
+                                    <i class="fa fa-home"></i>
+                                    <span class="clicked">Home</span>
+                                </a>
+                            </li>
+                            <li id="about">
+                                <a href="#section2">
+                                    <i class="fa fa-info-circle"></i>
+                                    <span class="clicked">About Us</span>
+                                </a>
+                            </li>
+                            <li id="mission">
+                                <a href="#section3">
+                                    <i class="fa fa-th-list"></i>
+                                    <span class="clicked">Mission</span>
+                                </a>
+                            </li>
+                            <li id="vision">
+                                <a href="#section4">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="clicked">Vision</span>
+                                </a>
+                            </li>
+                            <li id="services">
+                                <a href="#section5">
+                                    <i class="fa fa-key"></i>
+                                    <span class="clicked">Services</span>
+                                </a>
+                            </li>
+                            <li id="values">
+                                <a href="#section6">
+                                    <i class="fa fa-heart"></i>
+                                    <span class="clicked">Core Values</span>
+                                </a>
+                            </li>
+                            <li id="contact">
+                                <a href="#section7">
+                                    <i class="fa fa-phone"></i>
+                                    <span class="clicked">Contact</span>
+                                </a>
+                            </li>
+                            <li id="team">
+                                <a href="#section8">
+                                    <i class="fa fa-users"></i>
+                                    <span class="clicked">Our Team</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="sections">
+                    <div id="section1">
+                    </div>
+                    <div id="section2">
+                    </div>
+                    <div id="section3">
+                    </div>
+                    <div id="section4">
+                    </div>
+                    <div id="section5">
+                    </div>
+                    <div id="section6">
+                    </div>
+                    <div id="section7">
+                    </div>
+                    <div id="section8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function make_changes(str)
+        {
+            active_element_text = $('a[href$=' + str + '] span.clicked').text();
+            if(active_element_text == 'Home' || str == '')
+            {
+                $("#change-heading").hide();
+                $('.navbar-default').css('background-color','transparent');
+            }
+            else{
+                $('.navbar-default').css('background-color','#363636');
+                $("#change-heading").show();
+                $("#change-heading").text(active_element_text);
+            }
+        }
+        $(window).scroll(function() {
+            active_element_id = $("ul.nav-stacked li.active").attr('id');
+            if(active_element_id == 'home')
+            {
+                $("#change-heading").hide();
+                $('.navbar-default').css('background-color','transparent');
+            }
+            else{
+                $('.navbar-default').css('background-color','#363636');
+                $("#change-heading").show();
+                text = $('#'+ active_element_id + ' a span.clicked').text();
+                $("#change-heading").text(text);
+            }
+        });
+        $(document).ready(function() {
+            setTimeout(function () {
+                str = window.location.href;
+                var n = str.lastIndexOf('#');
+                var result = '';
+                if(n != -1)
+                    result = str.substring(n + 1);
+                make_changes(result);
+            }, 1);
+        });
+        $(document).ready(function() 
+        {
+            $('ul.nav-stacked li a').mouseup(function(e) { 
+                setTimeout(function () {
+                    str = window.location.href;
+                    var n = str.lastIndexOf('#');
+                    var result = str.substring(n + 1);
+                    make_changes(result);
+                }, 1);
+            });
+        });
+    </script>
+</html>
