@@ -173,45 +173,43 @@
                 $('#services_pic').css('opacity',0);
             }
         }
-        function make_changes(str)
+        function make_changes()
         {
-            active_element_text = $('a[href$=' + str + '] span.clicked').text();
-            if(active_element_text == 'Home'){
-                $("#change-heading").hide();
-                $('.navbar-default').css('background-color','transparent');
-            }
-            else{
-                $('.navbar-default').css('background-color','#363636');
-                $("#change-heading").show();
-                $("#change-heading").text(active_element_text);
-            }
-            if($(window).width() > 768)
-                make_transitions_in(active_element_text);
-        }
-        $(window).scroll(function() {
-            active_element_id = $("ul.nav-stacked li.active").attr('id');
-            if(active_element_id == 'home'){
-                $("#change-heading").hide();
-                $('.navbar-default').css('background-color','transparent');
+            scroll_pos = $(window).scrollTop();
+            if(scroll_pos < $('#section2').offset().top - 100)
                 text = 'Home';
+            if($('#section2').offset().top - scroll_pos <= 100)
+                text = 'About Us';
+            if($('#section3').offset().top - scroll_pos <= 100)
+                text = 'Mission';
+            if($('#section4').offset().top - scroll_pos <= 100)
+                text = 'Vision';
+            if($('#section5').offset().top - scroll_pos <= 100)
+                text = 'Services';
+            if($('#section6').offset().top - scroll_pos <= 100)
+                text = 'Core Values';
+            if($('#section7').offset().top - scroll_pos <= 100)
+                text = 'Contact';
+            if($('#section8').offset().top - scroll_pos <= 100)
+                text = 'Our Team';
+            if(text == 'Home'){
+                $("#change-heading").hide();
+                $('.navbar-default').css('background-color','transparent');
             }
             else{
                 $('.navbar-default').css('background-color','#363636');
                 $("#change-heading").show();
-                text = $('#'+ active_element_id + ' a span.clicked').text();
                 $("#change-heading").text(text);
             }
-            if($(window).width() >= 768)
+            if($(window).width() > 768)
                 make_transitions_in(text);
+        }
+        $(window).scroll(function() {
+            make_changes();
         });
         $(document).ready(function() {
             setTimeout(function () {
-                str = window.location.href;
-                var n = str.lastIndexOf('#');
-                var result = 'section1';
-                if(n != -1)
-                    result = str.substring(n + 1);
-                make_changes(result);
+                make_changes();
             }, 1);
             setTimeout(function () {
                 design_changes();
