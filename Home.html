@@ -12,7 +12,7 @@
         <link href="http://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans+Condensed:700" rel="stylesheet">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
-    <body data-spy="scroll" data-target="#scrollspy" data-offset="10">
+    <body data-spy="scroll" data-target="#scrollspy" data-offset="100">
         <div class="row">
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="navbar-header">
@@ -84,7 +84,7 @@
                 <div id="section2">
                     <div class = "row">
                         <div class="col-sm-6" align="center">
-                            <img id="about_us_pic" class="fading-pics" src="./About%20Us.png">
+                            <img id="about_us_pic" class="fading-pics" src="./about-us.png">
                         </div>
                         <div class="col-sm-6 para_black para1">
                             We are group of people from different demography but with the same passion in heart to make more beautiful and simple products and services. We at core, work hard and smart to bring ideas to life.
@@ -130,9 +130,22 @@
                 </div>
                 <div id="section6">
                     <div class="row">
-                        <div class="col-sm-4 para_black" id="value1">Customer Satisfaction</div>
-                        <div class="col-sm-4 para_black" id="value2">Simple and powerful Solution</div>
-                        <div class="col-sm-4 para_black" id="value3">Bleed and sweat for perfection</div>
+                        <div class="col-sm-4 para_black" id="value1">
+                            <div>Satisfaction of Customers</div>
+                            <img id="values_pic" class="fading-pics" src="./values.png">
+                        </div>
+                        <div class="col-sm-4 para_black" id="value2">
+                            <img id="values_pic2" class="fading-pics" src="./values2-1.png">
+                            <div>Simple and Powerful Solution</div>
+                        </div>
+                        <div class="col-sm-4 para_black" id="value3">
+                            <div>Bleed and Sweat for Perfection</div>
+                            <img id="values_pic3" class="fading-pics" src="./values3.png">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" align="center">
+                        </div>
                     </div>
                 </div>
                 <div id="section7">
@@ -145,10 +158,13 @@
     </body>
     <script type="text/javascript">
         function design_changes(){
-            //alert($(window).width());
             if($(window).width() > 768){
                 h = $('.para3').height();
                 $('#services_pic').css('height',h);
+                $('#value2 img').insertBefore($('#value2 div'));
+            }
+            else{
+                $('#value2 img').insertAfter($('#value2 div'));
             }
         }
         $(window).resize(function() {
@@ -171,6 +187,16 @@
             else{
                 $('.para3').css('left','-100%');
                 $('#services_pic').css('opacity',0);
+            }
+            if(heading == 'Core Values'){
+                $('#value1').css('left','0%');
+                $('#value2').css('opacity',1);
+                $('#value3').css('right','0%');
+            }
+            else{
+                $('#value1').css('left','-100%');
+                $('#value2').css('opacity',0);
+                $('#value3').css('right','-100%');
             }
         }
         function make_changes()
@@ -198,14 +224,24 @@
             }
             else{
                 $('.navbar-default').css('background-color','#363636');
+                if($("#change-heading").text() != text){
+                    $("#change-heading").fadeOut(100,function() {
+                        $(this).text(text).fadeIn(100);
+                    });
+                }
                 $("#change-heading").show();
-                $("#change-heading").text(text);
             }
             if($(window).width() > 768)
                 make_transitions_in(text);
         }
         $(window).scroll(function() {
             make_changes();
+            if($(window).scrollTop() === 0) {
+                setTimeout(function(){
+                    $("#change-heading").hide();
+                    $('.navbar-default').css('background-color','transparent');
+                }, 500);
+            }
         });
         $(document).ready(function() {
             setTimeout(function () {
