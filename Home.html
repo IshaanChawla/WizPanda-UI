@@ -161,19 +161,41 @@
                             </center>
                         </div>
                         <div class="col-sm-6" id="info_div">
-                                <div class="info_contact para_white"><b>Email :</b>  creative@wizpanda.com</div>
-                                <div class="info_contact para_white">
-                                    <div><b>Address :</b> 78A/8, Nehru Nagar(west), Bhilai, Chhattisgarh (Registered Office)</div>
-                                    <div style="padding-left : 67px;">Shop 3, 1st Floor, M.M.M. Complex, Above Allahbad Bank,Smirti Nagar, Bhilai, Chhattisgarh (Branch Office)</div>
-                                </div>
-                                <div class="info_contact para_white">
-                                    <div><b>Contact No. :</b> 0788-4033330(Office)</div>
-                                    <div style="padding-left : 93px;">+91-9827460360(Mobile)</div>
-                                </div>
+                            <div class="info_contact para_white"><b>Email :</b>  creative@wizpanda.com</div>
+                            <div class="info_contact para_white" id="address">
+                                <p>
+                                    <span id="first-address">
+                                        <b>Address :</b>
+                                        78A/8, Nehru Nagar(west), Bhilai, Chhattisgarh 
+                                        <b>(Registered Office)</b>
+                                    </span>
+                                    <span>
+                                        Shop 3, 1st Floor, M.M.M. Complex, Above Allahbad Bank, Smirti Nagar, Bhilai, Chhattisgarh 
+                                        <b>(Branch Office)</b>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="info_contact para_white" id="number">
+                                <p>
+                                    <span id="first-contact">
+                                        <b>Contact No. :</b>
+                                        0788-4033330<b>(Office)</b>
+                                    </span>
+                                    <span>
+                                        +91-9827460360<b>(Mobile)</b>
+                                    </span>
+                                </p>
+                            </div>
+                            <div id="icons">
+                                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                                <a href="#"><i class="fa fa-google-plus-official"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="section8">
+                    
                 </div>
                 <div id="footer">&copy; 2016 WizPanda. All Rights Reserved</div>
             </div>
@@ -182,13 +204,20 @@
     <script type="text/javascript">
         function design_changes(){
             if($(window).width() > 750){
+                //Section 5 Changes
                 height_para3 = $('.para3').height();
                 $('#services_pic').css('height',height_para3);
+                //Section 6 Changes
                 $('#value2 img').insertBefore($('#value2 div'));
+                //Section 1 Changes
                 top_para1 = (600 - $('.para1').height())/2;
                 top_about_div_pic = (600 - $('#about_div_pic').height())/2;
                 $('.para1').css('top',top_para1 + 'px');
                 $('#about_div_pic').css('top',top_about_div_pic + 'px');
+                //Section 7 Changes
+                top_form = ($('#info_div').height() - $('#form_div').height())/2 + 120;
+                $('#form_div').css('margin-top',top_form + 'px');
+                //make scroll changes
                 make_changes();
             }
             else{
@@ -243,6 +272,14 @@
                 $('#value1').css('left','-100%');
                 $('#value2').css('opacity',0);
                 $('#value3').css('right','-100%');
+            }
+            if(heading == 'Contact'){
+                $('#form_div').css('left','0%');
+                $('#info_div').css('right','0%');
+            }
+            else if(else_flag){
+                $('#form_div').css('left','-100%');
+                $('#info_div').css('right','-100%');   
             }
         }
         function make_changes()

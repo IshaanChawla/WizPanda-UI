@@ -329,12 +329,24 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     margin-top : 120px;
     margin-bottom : 5%;
     padding-right : 5%;
+    left : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
 }
 
 #info_div {
     margin-top : 120px;
     margin-bottom : 5%;
     padding-right : 5%;
+    right : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
 }
 
 .heading_contact {
@@ -345,8 +357,8 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 .info_contact {
     font-family : 'Bitter';
     font-size : 100%;
-    margin : 10px 0px;
-    text-align : justify;
+    margin : 0px 0px 20px 0px;
+    text-align : left;
 }
 
 .wrapper {
@@ -405,6 +417,37 @@ textarea:focus, input:focus{
 
 .btn-send:hover {
     color : White;
+}
+
+#address > p > span {
+    display : block;
+    padding : 0px 0px 6px 68px;
+}
+
+#address > p > #first-address {
+    text-indent : -68px;
+}
+
+#number > p > span {
+    display : block;
+    padding : 0px 0px 6px 93px;
+}
+
+#number > p > #first-contact {
+    text-indent : -93px; 
+}
+
+#icons{
+    text-align : center;
+}
+
+#icons > a {
+    margin : 0px 10px;
+}
+
+#icons > a > i {
+    color : white;
+    font-size:48px;
 }
 
 @media only screen and (max-width : 768px) {
@@ -509,5 +552,16 @@ textarea:focus, input:focus{
         margin-top : 20px;
         height : 200px;
         width : 100%;
+    }
+    #form_div {
+        margin-top : 120px;
+        margin-bottom : 5%;
+        padding-right : 5%;
+        left : 0%;
+    }
+    #info_div{
+        margin-top : 20px;
+        margin-bottom : 40px;
+        right : 0%;
     }
 }
