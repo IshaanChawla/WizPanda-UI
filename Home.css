@@ -143,31 +143,29 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     z-index : 0;
 }
 
-#section2,#section3,#section4,#section6,#section7{
-    padding : 0px;
-    margin : 0px;
-    width:100%;
-    min-height:500px;
-}
-
-#section1 {
-    padding : 0px;
+#section1,#section4,#section5,#section8{
+    padding-left : 140px;
     margin : 0px;
     width:100%;
     min-height:600px;
-    background: url('banner3.jpg') no-repeat center center fixed; 
+    position : relative;
+}
+
+#section2,#section3,#section6,#section7{
+    margin : 0px;
+    width:100%;
+    padding-left : 140px;
+    min-height:500px;
+    position : relative;
+}
+
+#section1 {
+    background: url('banner.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-}
-
-#section8,#section5{
-    padding : 0px;
-    margin : 0px;
-    width:100%;
-    min-height:600px;
 }
 
 #section2,#section4,#section6,#section8 {
@@ -205,12 +203,17 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     transition : opacity 1s ease-in-out;
 }
 
+#about_div,#mission_div,#contact_div,#why_us_div {
+    position : absolute;
+    height : 100%;
+}
+
 .para1 {
     font-family : 'Bitter';
     font-size : 150%;
     text-align : justify;
-    padding : 0% 5% 5% 5%;
-    margin-top : 220px;
+    padding : 0% 5% 0% 5%;
+    top : 34%;
     right : -100%;
     -webkit-transition : 1s;
     -moz-transition : 1s;
@@ -219,11 +222,14 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     transition : 1s;
 }
 
+#about_div_pic{
+    top : 20%;
+}
+
 #about_us_pic {
-    width : 300px;
     height : 300px;
+    width: 100%;
     margin-left : 5%;
-    margin-top : 140px;
     opacity : 0;
 }
 
@@ -231,7 +237,22 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     font-family : 'Bitter';
     text-align : justify;
     font-size : 150%;
-    padding : 12% 0% 5% 10%;
+    top : 40%;
+    left : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
+}
+
+#mission_pic {
+    width : 300px;
+    opacity : 0;
+}
+
+#mission_pic_div {
+    top : 25%;
 }
 
 .para3 {
@@ -265,34 +286,248 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 }
 
 #value1, #value2, #value3 {
-    
+    margin-top : 120px;
+    font-family : 'Bitter';
+    font-size : 150%;
+    text-align : center;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
+}
+
+#value1 {
+    left: -100%;
+}
+#value2 {
+    opacity : 0;
+}
+#value3 {
+    right : -100%;
+    padding-right : 3%;
+}
+
+#values_pic,#values_pic3 {
+    margin-top : 50px;
+    width : 200px;
+    height : 200px;
+}
+
+#values_pic2 {
+    height : 200px;
+    width : 100%;
+    margin-bottom : 50px;
+}
+
+#form_div {
+    margin-top : 120px;
+    margin-bottom : 5%;
+    padding-right : 5%;
+    left : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
+}
+
+#info_div {
+    margin-top : 120px;
+    margin-bottom : 5%;
+    padding-right : 5%;
+    right : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
+}
+
+.heading_contact {
+    font-family : 'Bitter';
+    font-size : 170%;
+}
+
+.info_contact {
+    font-family : 'Bitter';
+    font-size : 100%;
+    margin : 0px 0px 20px 0px;
+    text-align : left;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    margin : 10px 0px;
+    padding-left : 18px;
+    background-color: white;
+    border: 2px solid #CB6565;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input,textarea {
+    border : none;
+    border-radius: 4px;
+    width : 100%;
+    padding : 5px 7px;
+}
+
+textarea {
+    max-width : 100%;
+    display : block;
+    margin : 0px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.wrapper:before {
+    position: absolute;
+    left: 5px;
+    top : 4px; 
+    font-family: fontAwesome;
+    color: #CB6565;
+}
+
+#form_name:before {
+    content: '\f007';
+}
+
+#form_email:before {
+    content: '\f0e0';
+}
+
+#form_message:before {
+    content: '\f075';
+}
+
+.btn-send {
+    width : 30%;
+    background-color : #CB6565;
+    color : White;
+}
+
+.btn-send:hover {
+    color : White;
+}
+
+#address > p > span {
+    display : block;
+    padding : 0px 0px 6px 68px;
+}
+
+#address > p > #first-address {
+    text-indent : -68px;
+}
+
+#number > p > span {
+    display : block;
+    padding : 0px 0px 6px 93px;
+}
+
+#number > p > #first-contact {
+    text-indent : -93px; 
+}
+
+#icons{
+    text-align : center;
+}
+
+#icons > a {
+    margin : 0px 10px;
+}
+
+#icons > a > i {
+    color : white;
+    font-size:48px;
+}
+
+#why_us_pic_div {
+    top : 130px;
+}
+
+#why_us_pic {
+    width : 100%;
+    opacity : 0;
+}
+
+.para4 {
+    font-family : 'Bitter';
+    top : 167px;
+    text-align : justify;
+    padding-right : 10%;
+    font-size : 90%;
+    right : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
 }
 
 @media only screen and (max-width : 768px) {
     [class*="col-"] {
         width: inherit;
     }
+    #about_div {
+        position : relative;
+        padding-top : 60px;
+    }
+    #mission_div {
+        position : relative;
+        padding-top : 120px;
+    }
+    #contact_div {
+        position : relative;
+        padding-top : 120px;
+    }
+    #why_us_div {
+        position : relative;
+        padding-top : 120px;
+    }
     .para1 {
         font-family : 'Bitter';
         font-size : 150%;
-        padding : 10% 5% 5% 0%;
-        margin-left : 140px;
-        margin-top : 0px;
+        padding : 0% 10% 10% 0%;
+        top : 2%;
         right : 0%;
         text-align : justify;
     }
+    #about_div_pic {
+        top : 0%;
+    }
     #about_us_pic {
-        width : 300px;
-        height : 300px;
-        margin-left : 5%;
-        margin-top : 140px;
+        width : 100%;
+        min-height : 300px;
         opacity : 1;
+        padding-right : 5%;
+        margin-left : -5%;
+    }
+    .para2 {
+        font-family : 'Bitter';
+        text-align : justify;
+        padding-right : 10%;
+        font-size : 150%;
+        top : 20%;
+        left : 0%;
+    }
+
+    #mission_pic {
+        height: 100%;
+        opacity : 1;
+    }
+
+    #mission_pic_div {
+        top : 25%;
+        bottom : 5%;
     }
     .para3 {
         font-family : 'Bitter';
         font-size : 150%;
         padding : 0% 0% 5% 0%;
-        margin-left : 140px;
         margin-top : 20%;
         margin-right : 10px;
         left : 0%;
@@ -303,13 +538,66 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
         text-align : left;
     }
     #services_pic {
-        width : 100%;
         height : 100%;
         margin-top : 5%;
         margin-bottom : 10%;
         opacity : 1;
+        margin-left : -140px;
     }
     #service3, #service4, #service5, #service6 {
         margin-bottom : 8px;
+    }
+    #value1, #value2, #value3 {
+        font-family : 'Bitter';
+        font-size : 150%;
+        text-align : center;
+    }
+    #value1 {
+        margin-top : 120px;
+        left: 0%;
+    }
+    #value2 {
+        margin-top : 40px;
+        opacity : 1;
+    }
+    #value3 {
+        margin-top : 40px;
+        right : 0%;
+        margin-bottom : 20px;
+    }
+    #values_pic,#values_pic3 {
+        margin-top : 20px;
+        width : 200px;
+        height : 200px;
+    }
+    #values_pic2 {
+        margin-top : 20px;
+        height : 200px;
+        width : 100%;
+    }
+    #form_div {
+        margin-bottom : 5%;
+        padding-right : 5%;
+        left : 0%;
+    }
+    #info_div{
+        margin-top : 20px;
+        margin-bottom : 40px;
+        right : 0%;
+    }
+    #why_us_pic_div {
+        top : 0px;
+    }
+    #why_us_pic {
+        width : 100%;
+        opacity : 1;
+    }
+    .para4 {
+        font-family : 'Bitter';
+        top : 0px;
+        text-align : justify;
+        padding-right : 10%;
+        font-size : 90%;
+        right : 0%;
     }
 }

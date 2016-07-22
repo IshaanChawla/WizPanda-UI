@@ -12,7 +12,7 @@
         <link href="http://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans+Condensed:700" rel="stylesheet">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
-    <body data-spy="scroll" data-target="#scrollspy" data-offset="10">
+    <body data-spy="scroll" data-target="#scrollspy" data-offset="100">
         <div class="row">
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="navbar-header">
@@ -42,14 +42,14 @@
                     </li>
                     <li id="mission">
                         <a href="#section3">
-                            <i class="fa fa-th-list"></i>
+                            <i class="fa fa-bullseye"></i>
                             <span class="clicked">Mission</span>
                         </a>
                     </li>
                     <li id="vision">
                         <a href="#section4">
-                            <i class="fa fa-eye"></i>
-                            <span class="clicked">Vision</span>
+                            <i class="fa fa-question-circle"></i>
+                            <span class="clicked">Why Us?</span>
                         </a>
                     </li>
                     <li id="services">
@@ -82,9 +82,9 @@
                 <div id="section1">
                 </div>
                 <div id="section2">
-                    <div class = "row">
-                        <div class="col-sm-6" align="center">
-                            <img id="about_us_pic" class="fading-pics" src="./About%20Us.png">
+                    <div class = "row" id="about_div">
+                        <div class="col-sm-6" align="center" id="about_div_pic">
+                            <img id="about_us_pic" class="fading-pics" src="./about-us.png">
                         </div>
                         <div class="col-sm-6 para_black para1">
                             We are group of people from different demography but with the same passion in heart to make more beautiful and simple products and services. We at core, work hard and smart to bring ideas to life.
@@ -92,16 +92,35 @@
                     </div>
                 </div>
                 <div id="section3">
-                    <div class = "row">
+                    <div class = "row" id="mission_div">
                         <div class="col-sm-6 para_white para2">
                             No dream is too big and no dream is too small. We live to make dreams come true and want to give people hope that you are not too old to start dreaming.
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" align="center" id="mission_pic_div">
+                            <img  id="mission_pic" class="fading-pics" src="./mission.png">
                         </div>
                     </div>
                 </div>
                 <div id="section4">
-                    
+                    <div class="row" id="why_us_div">
+                        <div class="col-sm-6" id="why_us_pic_div">
+                            <img id="why_us_pic" class="fading-pics" src="./why-us.png">
+                        </div>
+                        <div class="col-sm-6 para4">
+                            <h4>Ask for 'X' and get 'X+1'</h4>
+                            <p>
+                                We continuously to seek new and better ways of rendering service and helps you build confidence in us.
+                            </p>
+                            <h4>Take the ’t’ off from 'can’t'</h4>
+                            <p>
+                                Where the customer cannot have what they want, a simple "no" is not good enough. "We can do this" meets the customer needs. We focus on meeting customers needs in any way possible. Talking ’t’ off from "can’t" is what we bleed for.
+                            </p>
+                            <h4>We are Agile</h4>
+                            <p>
+                                Working with people who understand your problem very well produces best results. We have best members on board who are always ready to learn something new. "New" that will add values in the product makes customer happy.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div id="section5">
                     <div class="row">
@@ -130,14 +149,71 @@
                 </div>
                 <div id="section6">
                     <div class="row">
-                        <div class="col-sm-4 para_black" id="value1">Customer Satisfaction</div>
-                        <div class="col-sm-4 para_black" id="value2">Simple and powerful Solution</div>
-                        <div class="col-sm-4 para_black" id="value3">Bleed and sweat for perfection</div>
+                        <div class="col-sm-4 para_black" id="value1">
+                            <div>Satisfaction of Customers</div>
+                            <img id="values_pic" class="fading-pics" src="./values1.png">
+                        </div>
+                        <div class="col-sm-4 para_black" id="value2">
+                            <img id="values_pic2" class="fading-pics" src="./values2.png">
+                            <div>Simple and Powerful Solution</div>
+                        </div>
+                        <div class="col-sm-4 para_black" id="value3">
+                            <div>Bleed and Sweat for Perfection</div>
+                            <img id="values_pic3" class="fading-pics" src="./values3.png">
+                        </div>
                     </div>
                 </div>
                 <div id="section7">
+                    <div class="row" id="#contact_div">
+                        <div class="col-sm-6" id="form_div">
+                            <center>
+                                <div class="heading_contact para_white">Drop A Message</div>
+                                <form>
+                                    <div class="wrapper" id="form_name"><input type="text" placeholder="Name"></div>
+                                    <div class="wrapper" id="form_email"><input type="email" placeholder="Email"></div>
+                                    <div class="wrapper" id="form_message"><textarea placeholder="Message" rows="4"></textarea></div>
+                                    <button type="submit" class="btn btn-send">
+                                         <i class="fa fa-paper-plane"></i> Send
+                                    </button>
+                                </form>
+                            </center>
+                        </div>
+                        <div class="col-sm-6" id="info_div">
+                            <div class="info_contact para_white"><b>Email :</b>  creative@wizpanda.com</div>
+                            <div class="info_contact para_white" id="address">
+                                <p>
+                                    <span id="first-address">
+                                        <b>Address :</b>
+                                        78A/8, Nehru Nagar(west), Bhilai, Chhattisgarh 
+                                        <b>(Registered Office)</b>
+                                    </span>
+                                    <span>
+                                        Shop 3, 1st Floor, M.M.M. Complex, Above Allahbad Bank, Smirti Nagar, Bhilai, Chhattisgarh 
+                                        <b>(Branch Office)</b>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="info_contact para_white" id="number">
+                                <p>
+                                    <span id="first-contact">
+                                        <b>Contact No. :</b>
+                                        0788-4033330<b>(Office)</b>
+                                    </span>
+                                    <span>
+                                        +91-9827460360<b>(Mobile)</b>
+                                    </span>
+                                </p>
+                            </div>
+                            <div id="icons">
+                                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                                <a href="#"><i class="fa fa-google-plus-official"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="section8">
+                    
                 </div>
                 <div id="footer">&copy; 2016 WizPanda. All Rights Reserved</div>
             </div>
@@ -145,32 +221,105 @@
     </body>
     <script type="text/javascript">
         function design_changes(){
-            //alert($(window).width());
-            if($(window).width() > 768){
-                h = $('.para3').height();
-                $('#services_pic').css('height',h);
+            if($(window).width() > 750){
+                //Section 5 Changes
+                height_para3 = $('.para3').height();
+                $('#services_pic').css('height',height_para3);
+                //Section 6 Changes
+                $('#value2 img').insertBefore($('#value2 div'));
+                //Section 1 Changes
+                top_para1 = (600 - $('.para1').height())/2;
+                top_about_div_pic = (600 - $('#about_div_pic').height())/2;
+                $('.para1').css('top',top_para1 + 'px');
+                $('#about_div_pic').css('top',top_about_div_pic + 'px');
+                //Section 7 Changes
+                top_form = ($('#info_div').height() - $('#form_div').height())/2 + 120;
+                $('#form_div').css('margin-top',top_form + 'px');
+                //Section 4 Changes
+                diff_sec4 = $('#why_us_pic_div').height() - $('.para4').height();
+                if(diff_sec4 > 0){
+                    $('#why_us_pic_div').css('top','130px');
+                    top_para4 = (diff_sec4)/2 + 130;
+                    $('.para4').css('top',top_para4 + 'px');
+                }
+                else{
+                    $('.para4').css('top','130px');
+                    top_para4 = -(diff_sec4)/2 + 130;
+                    $('#why_us_pic_div').css('top',top_para4 + 'px');
+                }
+                //make scroll changes
+                make_changes();
+            }
+            else{
+                $('#value2 img').insertAfter($('#value2 div'));
+                $('.para1').css('top','2%');
+                $('#about_div_pic').css('top','0%');
+                $('#why_us_pic_div').css('top','0px');
+                $('.para4').css('top','0px');
+                make_transitions_in('About Us',false);
+                make_transitions_in('Mission',false);
+                make_transitions_in('Why Us?',false);
+                make_transitions_in('Services',false);
+                make_transitions_in('Core Values',false);
+                make_transitions_in('Contact',false);
+                make_transitions_in('Our Team',false);
             }
         }
         $(window).resize(function() {
             design_changes();
         });
-        function make_transitions_in(heading)
+        function make_transitions_in(heading,else_flag)
         {
             if(heading == 'About Us'){
                 $('.para1').css('right','0%');
                 $('#about_us_pic').css('opacity',1);
             }
-            else{
+            else if(else_flag){
                 $('.para1').css('right','-100%');
                 $('#about_us_pic').css('opacity',0);
+            }
+            if(heading == 'Mission'){
+                $('.para2').css('left','0%');
+                $('#mission_pic').css('opacity',1);
+            }
+            else if(else_flag){
+                $('.para2').css('left','-100%');
+                $('#mission_pic').css('opacity',0);
+                
             }
             if(heading == 'Services'){
                 $('.para3').css('left','0%');
                 $('#services_pic').css('opacity',1);
             }
-            else{
+            else if(else_flag){
                 $('.para3').css('left','-100%');
                 $('#services_pic').css('opacity',0);
+            }
+            if(heading == 'Core Values'){
+                $('#value1').css('left','0%');
+                $('#value2').css('opacity',1);
+                $('#value3').css('right','0%');
+            }
+            else if(else_flag){
+                $('#value1').css('left','-100%');
+                $('#value2').css('opacity',0);
+                $('#value3').css('right','-100%');
+            }
+            if(heading == 'Contact'){
+                $('#form_div').css('left','0%');
+                $('#info_div').css('right','0%');
+            }
+            else if(else_flag){
+                $('#form_div').css('left','-100%');
+                $('#info_div').css('right','-100%');   
+            }
+            if(heading == 'Why Us?'){
+                $('#why_us_pic').css('opacity',1);
+                $('.para4').css('right','0%');
+            }
+            else if(else_flag){
+                $('#why_us_pic').css('opacity',0);
+                $('.para4').css('right','-100%');
             }
         }
         function make_changes()
@@ -183,7 +332,7 @@
             if($('#section3').offset().top - scroll_pos <= 100)
                 text = 'Mission';
             if($('#section4').offset().top - scroll_pos <= 100)
-                text = 'Vision';
+                text = 'Why Us?';
             if($('#section5').offset().top - scroll_pos <= 100)
                 text = 'Services';
             if($('#section6').offset().top - scroll_pos <= 100)
@@ -198,14 +347,24 @@
             }
             else{
                 $('.navbar-default').css('background-color','#363636');
+                if($("#change-heading").text() != text){
+                    $("#change-heading").fadeOut(100,function() {
+                        $(this).text(text).fadeIn(100);
+                    });
+                }
                 $("#change-heading").show();
-                $("#change-heading").text(text);
             }
-            if($(window).width() > 768)
-                make_transitions_in(text);
+            if($(window).width() > 750)
+                make_transitions_in(text,true);
         }
         $(window).scroll(function() {
             make_changes();
+            if($(window).scrollTop() === 0) {
+                setTimeout(function(){
+                    $("#change-heading").hide();
+                    $('.navbar-default').css('background-color','transparent');
+                }, 500);
+            }
         });
         $(document).ready(function() {
             setTimeout(function () {
