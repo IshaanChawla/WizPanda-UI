@@ -111,7 +111,7 @@
                             <p>
                                 We continuously to seek new and better ways of rendering service and helps you build confidence in us.
                             </p>
-                            <h4>Take the ’t’ off from 'can’t'</h4>
+                            <h4>Take the ’t’ off from can’t</h4>
                             <p>
                                 Where the customer cannot have what they want, a simple "no" is not good enough. "We can do this" meets the customer needs. We focus on meeting customers needs in any way possible. Talking ’t’ off from "can’t" is what we bleed for.
                             </p>
@@ -154,8 +154,8 @@
                             <img id="values_pic" class="fading-pics" src="./values1.png">
                         </div>
                         <div class="col-sm-4 para_black" id="value2">
-                            <img id="values_pic2" class="fading-pics" src="./values2.png">
                             <div>Simple and Powerful Solution</div>
+                            <img id="values_pic2" class="fading-pics" src="./values2.png">
                         </div>
                         <div class="col-sm-4 para_black" id="value3">
                             <div>Bleed and Sweat for Perfection</div>
@@ -183,7 +183,7 @@
                             <div class="info_contact para_white" id="address">
                                 <p>
                                     <span id="first-address">
-                                        <b>Address :</b>
+                                        <b>Address :</b>  
                                         78A/8, Nehru Nagar(west), Bhilai, Chhattisgarh 
                                         <b>(Registered Office)</b>
                                     </span>
@@ -196,7 +196,7 @@
                             <div class="info_contact para_white" id="number">
                                 <p>
                                     <span id="first-contact">
-                                        <b>Contact No. :</b>
+                                        <b>Contact No. : </b>
                                         0788-4033330<b>(Office)</b>
                                     </span>
                                     <span>
@@ -225,8 +225,6 @@
                 //Section 5 Changes
                 height_para3 = $('.para3').height();
                 $('#services_pic').css('height',height_para3);
-                //Section 6 Changes
-                $('#value2 img').insertBefore($('#value2 div'));
                 //Section 1 Changes
                 top_para1 = (600 - $('.para1').height())/2;
                 top_about_div_pic = (600 - $('#about_div_pic').height())/2;
@@ -251,7 +249,6 @@
                 make_changes();
             }
             else{
-                $('#value2 img').insertAfter($('#value2 div'));
                 $('.para1').css('top','2%');
                 $('#about_div_pic').css('top','0%');
                 $('#why_us_pic_div').css('top','0px');
