@@ -445,6 +445,10 @@ textarea:focus, input:focus{
     font-size:48px;
 }
 
+#icons > a:hover > i {
+    color : #CB6565;
+}
+
 #why_us_pic_div {
     top : 130px;
 }
@@ -597,6 +601,7 @@ textarea:focus, input:focus{
         top : 0px;
         text-align : justify;
         padding-right : 10%;
+        padding-bottom : 8%;
         font-size : 90%;
         right : 0%;
     }
