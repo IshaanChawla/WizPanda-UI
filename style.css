@@ -26,7 +26,7 @@ body{
     float : none;
     margin-top : 47px;
     margin-bottom : 0px;
-    font-family: 'Tangerine', serif;
+    font-family: 'Dosis', sans-serif;
     color : white !important;
     font-size : 45px;
     padding : 0%;
@@ -39,9 +39,9 @@ body{
 }
 
 .brand-name {
-    font-family: 'Tangerine', serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 50px;
-    margin-top: 30px;   
+    margin-top: 30px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -160,7 +160,7 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 }
 
 #section1 {
-    background: url('./images/banner.jpg') no-repeat center center fixed; 
+    background: url('./images/banner.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -387,7 +387,7 @@ textarea:focus, input:focus{
 .wrapper:before {
     position: absolute;
     left: 5px;
-    top : 4px; 
+    top : 4px;
     font-family: fontAwesome;
     color: #CB6565;
 }
@@ -429,7 +429,7 @@ textarea:focus, input:focus{
 }
 
 #number > p > #first-contact {
-    text-indent : -93px; 
+    text-indent : -93px;
 }
 
 #icons{
