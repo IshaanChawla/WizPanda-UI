@@ -107,13 +107,13 @@
                             <img id="why_us_pic" class="fading-pics" src="./images/why-us.png">
                         </div>
                         <div class="col-sm-6 para4">
-                            <h4>Ask for 'X' and get 'X+1'</h4>
+                            <h4>Ask for &rsquo;X&rsquo; and get &rsquo;X+1&rsquo;</h4>
                             <p>
                                 We continuously to seek new and better ways of rendering service and helps you build confidence in us.
                             </p>
-                            <h4>Take the ’t’ off from can’t</h4>
+                            <h4>Take the &rsquo;t&rsquo; off from can&rsquo;t</h4>
                             <p>
-                                Where the customer cannot have what they want, a simple "no" is not good enough. "We can do this" meets the customer needs. We focus on meeting customers needs in any way possible. Talking ’t’ off from "can’t" is what we bleed for.
+                                Where the customer cannot have what they want, a simple &rsquo;&rsquo;no&rsquo;&rsquo; is not good enough. &rsquo;We can do this&rsquo; meets the customer needs. We focus on meeting customers needs in any way possible. Talking &rsquo;t&rsquo; off from &rsquo;can’t&rsquo; is what we bleed for.
                             </p>
                             <h4>We are Agile</h4>
                             <p>
@@ -123,43 +123,64 @@
                     </div>
                 </div>
                 <div id="section5">
-                    <div class="row">
-                        <div class="col-sm-6 para_white para3">
-                            Website Design
-                            <ul class="remove-bullets list1">
-                                <li>Static Website Design</li>
-                                <li>Dynamic Website Design</li>
-                                <li>Website Re-Design</li>
-                            </ul>
-                            Web Development
-                            <ul class="remove-bullets list1">
-                                <li>B2B Portal Development</li>
-                                <li>Billing Management</li>
-                                <li>Accounting Management</li>
-                            </ul>
-                            <div id="service3">App Development - Mobile &amp; Hybrid</div>
-                            <div id="service4">Logo &amp; Corporate Identity (Branding)</div>
-                            <div id="service5">Enterprise Solution </div>
-                            <div id="service6">Web Hosting</div>
+                    <div class="row" id="sec5_row">
+                        <div class="col-sm-6 col-md-4 para_white services">
+                            <div class="service_icon"><i class="fa fa-desktop"></i></div>
+                            <div class="service_heading">Website Design</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
                         </div>
-                        <div class="col-sm-6" align="center">
-                            <img id="services_pic" class="fading-pics" src="./images/swiffiFlashHTML.png">
+                        <div class="col-sm-6 col-md-4 para_white services">
+                            <div class="service_icon"><i class="fa fa-code"></i></div>
+                            <div class="service_heading">Web Development</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 para_white services">
+                            <div class="service_icon"><i class="fa fa-mobile"></i></div>
+                            <div class="service_heading">App Development - Mobile &amp; Hybrid</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 para_white services">
+                            <div class="service_icon"><i class="fa fa-institution"></i></div>
+                            <div class="service_heading">Logo &amp; Corporate Identity (Branding)</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 para_white services">
+                            <div class="service_icon"><i class="fa fa-puzzle-piece"></i></div>
+                            <div class="service_heading">Enterprise Solution</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 para_white services">
+                            <div class="service_icon"><i class="fa fa-database"></i></div>
+                            <div class="service_heading">Web Hosting</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="section6">
                     <div class="row">
                         <div class="col-sm-4 para_black" id="value1">
-                            <div>Satisfaction of Customers</div>
                             <img id="values_pic" class="fading-pics" src="./images/values1.png">
+                            <div>Satisfaction of Customers</div>
                         </div>
                         <div class="col-sm-4 para_black" id="value2">
-                            <div>Simple and Powerful Solution</div>
                             <img id="values_pic2" class="fading-pics" src="./images/values2.png">
+                            <div>Simple and Powerful Solution</div>
                         </div>
                         <div class="col-sm-4 para_black" id="value3">
-                            <div>Bleed and Sweat for Perfection</div>
                             <img id="values_pic3" class="fading-pics" src="./images/values3.png">
+                            <div>Bleed and Sweat for Perfection</div>
                         </div>
                     </div>
                 </div>
@@ -222,29 +243,26 @@
     <script type="text/javascript">
         function design_changes(){
             if($(window).width() > 750){
-                //Section 5 Changes
-                height_para3 = $('.para3').height();
-                $('#services_pic').css('height',height_para3);
                 //Section 1 Changes
-                top_para1 = (600 - $('.para1').height())/2;
-                top_about_div_pic = (600 - $('#about_div_pic').height())/2;
+                top_para1 = (400 - $('.para1').height())/2;
+                top_about_div_pic = (400 - $('#about_div_pic').height())/2;
                 $('.para1').css('top',top_para1 + 'px');
                 $('#about_div_pic').css('top',top_about_div_pic + 'px');
                 //Section 7 Changes
-                top_form = ($('#info_div').height() - $('#form_div').height())/2 + 120;
+                top_form = ($('#info_div').height() - $('#form_div').height())/2;
                 $('#form_div').css('margin-top',top_form + 'px');
                 //Section 4 Changes
-                diff_sec4 = $('#why_us_pic_div').height() - $('.para4').height();
+                /*diff_sec4 = $('#why_us_pic_div').height() - $('.para4').height();
                 if(diff_sec4 > 0){
-                    $('#why_us_pic_div').css('top','130px');
-                    top_para4 = (diff_sec4)/2 + 130;
+                    $('#why_us_pic_div').css('top','0px');
+                    top_para4 = (diff_sec4)/2;
                     $('.para4').css('top',top_para4 + 'px');
                 }
                 else{
-                    $('.para4').css('top','130px');
-                    top_para4 = -(diff_sec4)/2 + 130;
+                    $('.para4').css('top','0px');
+                    top_para4 = -(diff_sec4)/2;
                     $('#why_us_pic_div').css('top',top_para4 + 'px');
-                }
+                }*/
                 //make scroll changes
                 make_changes();
             }
@@ -371,11 +389,12 @@
                 design_changes();
             }, 100);
         });
-        $(document).on('mouseup', 'a', function(event){
+        $(document).on('click', 'a', function(event){
             event.preventDefault();
+            this.blur(); 
             $('html, body').animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 500);
+            }, 1500);
         });
     </script>
 </html>
