@@ -12,7 +12,7 @@
         <link href="http://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans+Condensed:700" rel="stylesheet">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
-    <body data-spy="scroll" data-target="#scrollspy" data-offset="100">
+    <body data-spy="scroll" data-target="#scrollspy" data-offset="200">
         <div class="row">
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="navbar-header">
@@ -123,43 +123,43 @@
                     </div>
                 </div>
                 <div id="section5">
-                    <div class="row" id="sec5_row">
-                        <div class="col-sm-6 col-md-4 para_white services">
+                    <div class="row" id="services_div">
+                        <div class="col-sm-6 col-md-4 para_white services entry_left">
                             <div class="service_icon"><i class="fa fa-desktop"></i></div>
                             <div class="service_heading">Website Design</div>
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 para_white services">
+                        <div class="col-sm-6 col-md-4 para_white services entry_left">
                             <div class="service_icon"><i class="fa fa-code"></i></div>
                             <div class="service_heading">Web Development</div>
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 para_white services">
+                        <div class="col-sm-6 col-md-4 para_white services entry_right">
                             <div class="service_icon"><i class="fa fa-mobile"></i></div>
                             <div class="service_heading">App Development - Mobile &amp; Hybrid</div>
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 para_white services">
+                        <div class="col-sm-6 col-md-4 para_white services entry_left">
                             <div class="service_icon"><i class="fa fa-institution"></i></div>
                             <div class="service_heading">Logo &amp; Corporate Identity (Branding)</div>
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 para_white services">
+                        <div class="col-sm-6 col-md-4 para_white services entry_right">
                             <div class="service_icon"><i class="fa fa-puzzle-piece"></i></div>
                             <div class="service_heading">Enterprise Solution</div>
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 para_white services">
+                        <div class="col-sm-6 col-md-4 para_white services entry_right">
                             <div class="service_icon"><i class="fa fa-database"></i></div>
                             <div class="service_heading">Web Hosting</div>
                             <div>
@@ -169,7 +169,7 @@
                     </div>
                 </div>
                 <div id="section6">
-                    <div class="row">
+                    <div class="row" id="value_div">
                         <div class="col-sm-4 para_black" id="value1">
                             <img id="values_pic" class="fading-pics" src="./images/values1.png">
                             <div>Satisfaction of Customers</div>
@@ -185,7 +185,7 @@
                     </div>
                 </div>
                 <div id="section7">
-                    <div class="row" id="#contact_div">
+                    <div class="row" id="contact_div">
                         <div class="col-sm-6" id="form_div">
                             <center>
                                 <div class="heading_contact para_white">Drop A Message</div>
@@ -241,51 +241,28 @@
         </div>
     </body>
     <script type="text/javascript">
+        data_offset = 200;
         function design_changes(){
-            if($(window).width() > 750){
-                //Section 1 Changes
-                top_para1 = (400 - $('.para1').height())/2;
-                top_about_div_pic = (400 - $('#about_div_pic').height())/2;
-                $('.para1').css('top',top_para1 + 'px');
-                $('#about_div_pic').css('top',top_about_div_pic + 'px');
-                //Section 7 Changes
-                top_form = ($('#info_div').height() - $('#form_div').height())/2;
-                $('#form_div').css('margin-top',top_form + 'px');
-                //Section 4 Changes
-                /*diff_sec4 = $('#why_us_pic_div').height() - $('.para4').height();
-                if(diff_sec4 > 0){
-                    $('#why_us_pic_div').css('top','0px');
-                    top_para4 = (diff_sec4)/2;
-                    $('.para4').css('top',top_para4 + 'px');
-                }
-                else{
-                    $('.para4').css('top','0px');
-                    top_para4 = -(diff_sec4)/2;
-                    $('#why_us_pic_div').css('top',top_para4 + 'px');
-                }*/
-                //make scroll changes
-                make_changes();
-            }
-            else{
-                $('.para1').css('top','2%');
-                $('#about_div_pic').css('top','0%');
-                $('#why_us_pic_div').css('top','0px');
-                $('.para4').css('top','0px');
-                make_transitions_in('About Us',false);
-                make_transitions_in('Mission',false);
-                make_transitions_in('Why Us?',false);
-                make_transitions_in('Services',false);
-                make_transitions_in('Core Values',false);
-                make_transitions_in('Contact',false);
-                make_transitions_in('Our Team',false);
+            if($(window).width() < 750){
+                make_transitions_in($('#section2').offset().top,false);
+                make_transitions_in($('#section3').offset().top,false);
+                make_transitions_in($('#section4').offset().top,false);
+                make_transitions_in($('#section5').offset().top,false);
+                make_transitions_in($('#section6').offset().top,false);
+                make_transitions_in($('#section7').offset().top,false);
+                make_transitions_in($('#section8').offset().top,false);
             }
         }
         $(window).resize(function() {
             design_changes();
+            section = $('ul.nav-stacked li.active a').attr('href');
+            $('html, body').animate({
+                scrollTop: $(section).offset().top - 100
+            }, 100);
         });
-        function make_transitions_in(heading,else_flag)
+        function make_transitions_in(scroll_pos,else_flag)
         {
-            if(heading == 'About Us'){
+            if($('#section2').offset().top - scroll_pos <= data_offset){
                 $('.para1').css('right','0%');
                 $('#about_us_pic').css('opacity',1);
             }
@@ -293,7 +270,7 @@
                 $('.para1').css('right','-100%');
                 $('#about_us_pic').css('opacity',0);
             }
-            if(heading == 'Mission'){
+            if($('#section3').offset().top - scroll_pos <= data_offset){
                 $('.para2').css('left','0%');
                 $('#mission_pic').css('opacity',1);
             }
@@ -302,15 +279,26 @@
                 $('#mission_pic').css('opacity',0);
                 
             }
-            if(heading == 'Services'){
-                $('.para3').css('left','0%');
-                $('#services_pic').css('opacity',1);
+            if($('#section4').offset().top - scroll_pos <= data_offset){
+                $('#why_us_pic').css('opacity',1);
+                $('.para4').css('right','0%');
             }
             else if(else_flag){
-                $('.para3').css('left','-100%');
-                $('#services_pic').css('opacity',0);
+                $('#why_us_pic').css('opacity',0);
+                $('.para4').css('right','-100%');
             }
-            if(heading == 'Core Values'){
+            if($('#section5').offset().top - scroll_pos <= data_offset){
+                $('.entry_left').css('left','0%');
+                $('.entry_right').css('right','0%');
+            }
+            else if(else_flag){
+                if($(window).width() > 992)
+                    $('.entry_left').css('left','-100%');
+                else
+                    $('.entry_left').css('left','-120%');
+                $('.entry_right').css('right','-100%');
+            }
+            if($('#section6').offset().top - scroll_pos <= data_offset){
                 $('#value1').css('left','0%');
                 $('#value2').css('opacity',1);
                 $('#value3').css('right','0%');
@@ -320,7 +308,7 @@
                 $('#value2').css('opacity',0);
                 $('#value3').css('right','-100%');
             }
-            if(heading == 'Contact'){
+            if($('#section7').offset().top - scroll_pos <= data_offset){
                 $('#form_div').css('left','0%');
                 $('#info_div').css('right','0%');
             }
@@ -328,33 +316,25 @@
                 $('#form_div').css('left','-100%');
                 $('#info_div').css('right','-100%');   
             }
-            if(heading == 'Why Us?'){
-                $('#why_us_pic').css('opacity',1);
-                $('.para4').css('right','0%');
-            }
-            else if(else_flag){
-                $('#why_us_pic').css('opacity',0);
-                $('.para4').css('right','-100%');
-            }
         }
         function make_changes()
         {
             scroll_pos = $(window).scrollTop();
-            if(scroll_pos < $('#section2').offset().top - 100)
+            if(scroll_pos < $('#section2').offset().top - data_offset)
                 text = 'Home';
-            if($('#section2').offset().top - scroll_pos <= 100)
+            if($('#section2').offset().top - scroll_pos <= data_offset)
                 text = 'About Us';
-            if($('#section3').offset().top - scroll_pos <= 100)
+            if($('#section3').offset().top - scroll_pos <= data_offset)
                 text = 'Mission';
-            if($('#section4').offset().top - scroll_pos <= 100)
+            if($('#section4').offset().top - scroll_pos <= data_offset)
                 text = 'Why Us?';
-            if($('#section5').offset().top - scroll_pos <= 100)
+            if($('#section5').offset().top - scroll_pos <= data_offset)
                 text = 'Services';
-            if($('#section6').offset().top - scroll_pos <= 100)
+            if($('#section6').offset().top - scroll_pos <= data_offset)
                 text = 'Core Values';
-            if($('#section7').offset().top - scroll_pos <= 100)
+            if($('#section7').offset().top - scroll_pos <= data_offset)
                 text = 'Contact';
-            if($('#section8').offset().top - scroll_pos <= 100)
+            if($('#section8').offset().top - scroll_pos <= data_offset)
                 text = 'Our Team';
             if(text == 'Home'){
                 $("#change-heading").hide();
@@ -370,7 +350,7 @@
                 $("#change-heading").show();
             }
             if($(window).width() > 750)
-                make_transitions_in(text,true);
+                make_transitions_in(scroll_pos,true);
         }
         $(window).scroll(function() {
             make_changes();
@@ -393,7 +373,7 @@
             event.preventDefault();
             this.blur(); 
             $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
+                scrollTop: $( $.attr(this, 'href') ).offset().top - 100
             }, 1500);
         });
     </script>

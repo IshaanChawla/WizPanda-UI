@@ -146,7 +146,7 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 #section1,#section2,#section3,#section4,#section5,#section6,#section7,#section8{
     margin : 0px;
     width:100%;
-    padding : 140px 10px 20px 140px;
+    padding : 0px 10px 20px 140px;
     position : relative;
 }
 
@@ -154,10 +154,13 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     min-height:600px;
 }
 
-#section2,#section3,#section4,#section6,#section7{
-    min-height:600px;
+#section2,#section3,#section4,#section7{
+    min-height:500px;
 }
 
+#section6 {
+    min-height : 400px;
+}
 
 #section1 {
     background: url('./images/banner.jpg') no-repeat center center fixed; 
@@ -203,17 +206,50 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     transition : opacity 1s ease-in-out;
 }
 
-.para1 {
-    font-family : 'Bitter';
-    font-size : 150%;
-    text-align : justify;
-    padding : 0% 5% 0% 5%;
+.entry_left {
+    left : -100%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
+}
+
+.entry_right {
     right : -100%;
     -webkit-transition : 1s;
     -moz-transition : 1s;
     -o-transition : 1s;
     -ms-transition : 1s;
     transition : 1s;
+}
+
+#why_us_div, #contact_div, #value_div, #services_div,#mission_div,#about_div {
+    position : absolute;
+    height : 100%;
+    padding-right : 2%;
+}
+
+.para1 {
+    font-family : 'Bitter';
+    font-size : 150%;
+    text-align : justify;
+    right : -100%;
+    padding-left : 5%;
+    -webkit-transition : 1s;
+    -moz-transition : 1s;
+    -o-transition : 1s;
+    -ms-transition : 1s;
+    transition : 1s;
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
+}
+
+#about_div_pic {
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
 }
 
 #about_us_pic {
@@ -233,6 +269,9 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     -o-transition : 1s;
     -ms-transition : 1s;
     transition : 1s;
+    position : relative;
+    top : 50%;
+    transform : translateY(-50%);
 }
 
 #mission_pic {
@@ -241,13 +280,18 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 }
 
 #mission_pic_div {
-    top : 25%;
+    position : relative;
+    top : 50%;
+    transform : translateY(-50%);
 }
 
 #value1, #value2, #value3 {
     font-family : 'Bitter';
     font-size : 150%;
     text-align : center;
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
     -webkit-transition : 1s;
     -moz-transition : 1s;
     -o-transition : 1s;
@@ -279,6 +323,9 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 }
 
 #form_div {
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
     margin-bottom : 5%;
     left : -100%;
     -webkit-transition : 1s;
@@ -289,7 +336,11 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
 }
 
 #info_div {
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
     margin-bottom : 5%;
+    padding-left : 5%;
     right : -100%;
     -webkit-transition : 1s;
     -moz-transition : 1s;
@@ -387,7 +438,7 @@ textarea:focus, input:focus{
 }
 
 #icons{
-    text-align : center;
+    text-align : left;
 }
 
 #icons > a {
@@ -403,14 +454,10 @@ textarea:focus, input:focus{
     color : #CB6565;
 }
 
-#why_us_div {
-    display : table;
-    height : 100%;
-}
-
 #why_us_pic_div {
-    display : table-cell;
-    vertical-align : middle;
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
 }
 
 #why_us_pic {
@@ -420,16 +467,17 @@ textarea:focus, input:focus{
 
 .para4 {
     font-family : 'Bitter';
-    text-align : justify;
+    text-align : center;
     font-size : 90%;
     right : -100%;
+    position : relative;
+    top : 50% !important;
+    transform : translateY(-50%);
     -webkit-transition : 1s;
     -moz-transition : 1s;
     -o-transition : 1s;
     -ms-transition : 1s;
     transition : 1s;
-    display : table-cell;
-    vertical-align : middle;
 }
 
 .services {
@@ -437,6 +485,9 @@ textarea:focus, input:focus{
     font-family : 'Bitter';
     text-align : center;
     padding : 10px 20px;
+    position : relative;
+    top : 30% !important;
+    transform : translateY(-50%);
 }
 
 .service_heading {
@@ -450,33 +501,73 @@ textarea:focus, input:focus{
     color : #CB6565;
 }
 
+@media only screen and (min-width : 769px) and (max-width : 992px) {
+    
+    #section5 {
+        padding-top : 40px;
+    }
+    
+    #services_div {
+        position : relative;
+    }
+    
+    .entry_left {
+        left : -120%;
+    }
+    
+    .services {
+        bottom : 30px;
+        font-family : 'Bitter';
+        text-align : center;
+        padding : 10px 20px;
+        position : relative;
+        top : 0px;
+        transform : translateY(0%);
+    }
+}
+
 @media only screen and (max-width : 768px) {
     [class*="col-"] {
-        width: inherit;
+        width : inherit;
     }
+    
+    #section1,#section2,#section3,#section4,#section5,#section6,#section7,#section8 {
+        padding-top : 40px;
+    }
+    
+    #why_us_div,#contact_div,#value_div,#services_div,#about_div {
+        position : relative;
+    }
+    
     .para1 {
         font-family : 'Bitter';
+        padding-left : 0%;
         font-size : 150%;
-        padding : 0% 10% 10% 0%;
-        top : 2%;
         right : 0%;
         text-align : justify;
+        top : 0px;
+        transform : translateY(0%);
     }
+    
     #about_div_pic {
-        top : 0%;
+        top : 0px;
+        transform : translateY(0%);
     }
+    
     #about_us_pic {
         width : 100%;
         min-height : 300px;
         opacity : 1;
         margin-left : -5%;
     }
+    
     .para2 {
         font-family : 'Bitter';
         text-align : justify;
         font-size : 150%;
-        top : 20%;
+        top : 0%;
         left : 0%;
+        transform : translateY(0%);
     }
 
     #mission_pic {
@@ -485,64 +576,86 @@ textarea:focus, input:focus{
     }
 
     #mission_pic_div {
-        top : 25%;
-        bottom : 5%;
+        top : 0%;
+        transform : translateY(0%);
     }
+    
     #value1, #value2, #value3 {
         font-family : 'Bitter';
         font-size : 130%;
         text-align : center;
+        top : 0px;
+        transform : translateY(0%);
     }
+    
     #value1 {
         left: 0%;
     }
+    
     #value2 {
         margin-top : 40px;
         opacity : 1;
     }
+    
     #value3 {
         margin-top : 40px;
         right : 0%;
     }
+    
     #values_pic,#values_pic3 {
         height : 100px;
         width : 100px;
         margin-bottom : 10px;
     }
+    
     #values_pic2 {
         height : 100px;
         width : 50%;
         margin-bottom : 10px;
     }
+    
     #form_div {
+        top : 0px;
+        transform : translateY(0%);
         margin-bottom : 5%;
         left : 0%;
     }
+    
     #info_div{
+        top : 0px;
+        transform : translateY(0%);
         margin-top : 20px;
         margin-bottom : 40px;
         right : 0%;
+        padding-left : 0%;
     }
+    
     #why_us_pic_div {
         top : 0px;
+        transform : translateY(0%);
     }
+    
     #why_us_pic {
         width : 100%;
         opacity : 1;
     }
+    
     .para4 {
         font-family : 'Bitter';
         top : 0px;
+        transform : translateY(0%);
         text-align : justify;
         padding-bottom : 8%;
         font-size : 90%;
         right : 0%;
     }
+    
     .services {
-        top : 0px;
         bottom : 30px;
         font-family : 'Bitter';
         text-align : center;
         padding : 10px 20px;
+        top : 0px;
+        transform : translateY(0%);
     }
 }
