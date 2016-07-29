@@ -154,12 +154,12 @@ ul.nav-stacked li a:hover > .clicked, ul.nav-stacked li a:focus > .clicked {
     min-height:600px;
 }
 
-#section2,#section3,#section4,#section7{
-    min-height:500px;
+#section2,#section3,#section6 {
+    min-height : 400px;
 }
 
-#section6 {
-    min-height : 400px;
+#section4,#section7{
+    min-height:500px;
 }
 
 #section1 {
